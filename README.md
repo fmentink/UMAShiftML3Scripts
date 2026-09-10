@@ -27,18 +27,11 @@ This repository does **not** create or manage your Python environment; you must 
 **Option A — conda:**
 
 ```bash
-conda create -n uma python=3.10
+conda create -n uma python=3.12
 conda activate uma
 pip install -r requirements.txt
 ```
 
-**Option B — venv:**
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
 
 > **NVIDIA GPU users:** install the CUDA-enabled PyTorch build first (see <https://pytorch.org>) before running `pip install -r requirements.txt`.
 
