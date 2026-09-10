@@ -1,9 +1,9 @@
 # UMAShiftML3Scripts
 Scripts used for Accessible hybrid DFT-quality NMR crystallography via gas-phase Machine Learning Interatomic Potentials https://doi.org/10.1039/D6SC04941A
 
-# UMA Crystal Structure Optimization (simplified)
+# UMA Crystal Structure Optimization 
 
-A simplified, single-GPU version of the UMA crystal relaxation workflow. It relaxes crystal structures from CIF files using Meta's UMA machine-learning interatomic potentials (MLIPs) via FAIRChem and ASE: CIF in, relaxed CIF/XYZ out. Batch (directory) mode is supported.
+A single-GPU version of the UMA crystal relaxation workflow. It relaxes crystal structures from CIF files using Meta's UMA machine-learning interatomic potentials (MLIPs) via FAIRChem and ASE: CIF in, relaxed CIF/XYZ out. Batch (directory) mode is supported.
 
 ## Features
 
