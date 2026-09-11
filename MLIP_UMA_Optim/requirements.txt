@@ -1,0 +1,8 @@
+numpy
+ase
+pymatgen
+torch            # for NVIDIA GPUs install the CUDA-enabled build from https://pytorch.org first; default wheels are CPU-only (fine on macOS)
+fairchem-core    # FAIRChem providing FAIRChemCalculator and pretrained UMA models (uma-s-1p1/uma-s-1p2/uma-m-1p1); if model loading fails, check https://github.com/FAIR-Chem/fairchem for the current install instructions
+
+# Optional: Sella optimizer support (v2.5.0, released 23 Jun 2026 — adds cell optimization; see https://github.com/zadorlab/sella/releases/tag/v2.5.0)
+# sella>=2.5.0
