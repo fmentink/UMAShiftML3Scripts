@@ -1,0 +1,4 @@
+numpy
+ase
+torch            # for NVIDIA GPUs install the CUDA-enabled build from https://pytorch.org first; default wheels are CPU-only (fine on macOS)
+shiftml          # ShiftML3 model (pip install shiftml); see https://github.com/compo-molab/ShiftML
