@@ -1,6 +1,7 @@
 # ShiftML3 CSA Calculator
 
-Fast NMR chemical shielding tensor predictions for organic crystals using the ShiftML3 deep-learning model. An 8-model ensemble averages full tensors before extracting principal components (σ11 ≥ σ22 ≥ σ33), with per-atom standard deviations as an uncertainty estimate. No DFT required — seconds on GPU, minutes on CPU.
+Script to run ShiftML3 by Kellner, Matthias et al. (10.1021/acs.jpclett.5c01819)
+Predicts NMR chemical shielding tensor predictions for organic crystals using the ShiftML3 deep-learning model. This script takes in a 8-model ensemble averages full tensors before extracting principal components (σ11 ≥ σ22 ≥ σ33), with per-atom standard deviations as an uncertainty estimate. No DFT required — seconds on GPU, minutes on CPU.
 
 ## Features
 
@@ -9,6 +10,7 @@ Fast NMR chemical shielding tensor predictions for organic crystals using the Sh
 - Per-atom output with std across the ensemble (uncertainty estimate)
 - Accepts CIF and XYZ files
 - GPU (CUDA) or CPU execution (`--device cpu`)
+- Save a txt and a magres file
 
 ## Requirements
 
