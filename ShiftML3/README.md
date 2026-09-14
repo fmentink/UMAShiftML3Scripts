@@ -69,7 +69,7 @@ For each input structure, files are written:
 
 ## Notes
 
-- **Ensemble:** the 8 models are run independently; their tensors are averaged before eigenvalue extraction. This is more physically meaningful than averaging eigenvalues separately.
+- **Ensemble:** the 8 models are run independently; their tensors are averaged before eigenvalue extraction. 
 - **Units:** all shifts in ppm (shielding convention: σ11 ≥ σ22 ≥ σ33).
 - If model loading fails, check that `shiftml` is installed and up to date: <https://github.com/compo-molab/ShiftML>.
 
