@@ -2,11 +2,12 @@
 
 Single-GPU version of the UMA crystal relaxation workflow as used in https://doi.org/10.1039/D6SC04941A
 Relaxes crystal structures from CIF files using Meta's UMA MLIPs via FAIRChem and ASE. Single-file or batch mode; GPU (CUDA) or CPU.
+Can be executed on desktop/laptop. More info can be found here https://fair-chem.github.io/
 
 ## Features
 
 - Single file or directory batch processing (with optional `--recursive` subdirectory search)
-- Optimizers: LBFGS, FIRE, BFGS, GPMin (plus optional Sella)
+- Optimizers: LBFGS, FIRE, BFGS, GPMin (optional Sella)
 - Optional unit-cell relaxation via `FrechetCellFilter` (only when `--cell-opt` is passed)
 - `FixSymmetry` constraint applied by default (`--no-symmetry` to disable)
 - Initial-force gate to skip bad starting structures (`--max-initial-force`)
@@ -105,7 +106,7 @@ Batch mode prints a success/failure summary at the end.
 ## Notes
 
 - **Sella** is optional: `pip install 'sella>=2.5.0'`. With `--cell-opt`, Sella uses its v2.5.0 cell-optimization support (`optimize_cell`). Sella does not support symmetry constraints — always pass `--no-symmetry` when using it (the script enforces this and exits with an error otherwise).
-- **Cell relaxation & stress:** when `--cell-opt` is used, the calculator enables stress prediction via FAIRChem's `predict_untrained_stress` inference setting (UMA tasks are not trained with stress labels, so stress is computed by autograd); it stays disabled otherwise to save time. See <https://fair-chem.github.io/ase-calculator/#enabling-gradient-stress-or-hessian-prediction>.
+- **Cell relaxation & stress:** when `--cell-opt` is used, the calculator enables stress prediction via FAIRChem's `predict_untrained_stress` inference setting (https://fair-chem.github.io/); it stays disabled otherwise to save time. See <https://fair-chem.github.io/ase-calculator/#enabling-gradient-stress-or-hessian-prediction>.
 - **CPU mode:** `--device cpu` forces CPU execution regardless of GPU availability. Useful on macOS, when the GPU is occupied by another process, or for debugging.
 - If FAIRChem/UMA model loading fails, check that your `fairchem-core` provides the pretrained UMA models (`fairchem.core.pretrained_mlip`) and consult <https://github.com/facebookresearch/fairchem>.
 - UMA models require a Hugging Face account with accepted access to the [facebook/UMA](https://huggingface.co/facebook/UMA) repository. Run `huggingface-cli login` before first use.
