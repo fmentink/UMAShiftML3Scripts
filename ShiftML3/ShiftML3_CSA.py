@@ -3,8 +3,8 @@
 ShiftML3 CSA Calculator — fast NMR chemical shielding tensors for organic crystals
 ================================================================================
 
-Predicts full chemical shielding tensors (isotropic + anisotropy) using the
-ShiftML3 deep-learning model. Runs an 8-model ensemble, averages the tensors,
+Predicts full magnetic shielding tensors (isotropic + anisotropy) using the
+ShiftML3 deep-learning model (Kellner et al.). Runs an 8-model ensemble, averages the tensors,
 then extracts principal components (σ11 ≥ σ22 ≥ σ33). Reports per-atom results
 with standard deviations across the ensemble as a measure of prediction uncertainty.
 
