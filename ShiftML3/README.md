@@ -7,7 +7,7 @@ The magnetic shiedlings can be converted back to chemical shifts following the c
 ## Features
 
 - Single file or directory batch processing (with optional `--recursive`)
-- 8-model ensemble: average tensors first → eigenvalues (physically meaningful)
+- 8-model ensemble: average tensors first → eigenvalues 
 - Per-atom output with std across the ensemble (uncertainty estimate)
 - Accepts CIF and XYZ files
 - GPU (CUDA) or CPU execution (`--device cpu`)
